@@ -1,6 +1,6 @@
 function getComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3) + 1
-    console.log(randomNumber);
+    // console.log(randomNumber);
     
     let guess = ''
     if(randomNumber === 1)
@@ -12,5 +12,11 @@ function getComputerChoice(){
     return guess
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
+function getHumanChoice(){
+    let userChoice = prompt('Enter rock, paper or scissors');
+    return userChoice
+}
+
+// console.log(getHumanChoice());
