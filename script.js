@@ -13,8 +13,6 @@ function getComputerChoice() {
     return guess
 }
 
-// console.log(getComputerChoice());
-
 
 //get human choice logic
 function getHumanChoice() {
@@ -24,44 +22,14 @@ function getHumanChoice() {
 
 // console.log(getHumanChoice());
 
-//play a single round logic
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
-        console.log(`It's a tie! you and the computer chose ${humanChoice}.`);
-        return
-    } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-        humanScore++
-        console.log("You won ! paper beats rock.");
-        return
-    } else if (humanChoice === 'rock' && computerChoice === 'paper') {
-        computerScore++
-        console.log("You lost! paper beats rock.");
-        return
-    } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-        computerScore++
-        console.log("You lost! scissors beats paper.");
-        return
-    } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-        humanScore++
-        console.log("You won! scissors beats paper.");
-        return
-    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-        humanScore++
-        console.log("You won! rock beats scissors.");
-        return
-    } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-        computerScore++
-        console.log("You lost! rock beats scissors.");
-        return
-    }
-}
-
+//play the game logic
 function playGame() {
     let humanScore = 0
     let computerScore = 0
 
     let rounds = 0
 
+    //moved play round logic here
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === computerChoice) {
             console.log(`It's a tie! you and the computer chose ${humanChoice}.`);
